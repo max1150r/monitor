@@ -1,0 +1,11 @@
+ (cd "$(git rev-parse --show-toplevel)" && printf '%s' 'diff --git a/.gitignore b/.gitignore
+index b25c15b81fae06e1c55946ac6270bfdb293870e8..e78c14db088b773d69d00c7637890a5e77fd80e6 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,4 @@
+-*~
++__pycache__/
++*.py[cod]
++build/
++dist/
+' | git apply --3way)
